@@ -2,9 +2,9 @@
 :root {
   --primary-color: #00acf2;
   --secondary-color: #86d6ff;
-  --accent-color: #dadada;
+  --accent-color: #fcf3f3;
   --text-color: #272727;
-  --background-color: #ffffff;
+  --background-color: #f5f2f2;
   --green:rgba(0,200,0, 1);
 }
 @media (prefers-color-scheme: dark) {
@@ -24,8 +24,30 @@
   font-family: 'Poppins';
 }
 body {
+  position: relative;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+.github-logo{
+  width: 45px;
+  height: 45px;
+ overflow: hidden;
+ border-radius: 50%;
+ position: absolute;
+ right: 5%;
+ top: 50%;
+ transform: translateY(-24px);
+ opacity: 0.5;
+ transition: 0.2s;
+}
+.github-logo:hover{
+  opacity: 1;
+}
+.github-logo  img{
+  padding: 1px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
 }
 #title {
   text-align: center;
