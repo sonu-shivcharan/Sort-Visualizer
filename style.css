@@ -33,12 +33,13 @@ body {
   height: 45px;
  overflow: hidden;
  border-radius: 50%;
- position: absolute;
- right: 5%;
+ position:fixed;
+ left: 5%;
  top: 50%;
  transform: translateY(-24px);
  opacity: 0.5;
  transition: 0.2s;
+ z-index: 2;
 }
 .github-logo:hover{
   opacity: 1;
