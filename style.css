@@ -5,7 +5,7 @@
   --accent-color: #fcf3f3;
   --text-color: #272727;
   --background-color: #f5f2f2;
-  --green:rgba(0,200,0, 1);
+  --green:rgba(0,150,90,1);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -94,22 +94,15 @@ button {
   font-weight: bold;
   color: #fff;
   position: relative;
-  outline-style: solid;
-  outline-width: 3px;
   transition: 0.2s;
 }
 #sort-btn{
-  outline-color: rgba(0,100,200,0.5);
 background-color: var(--primary-color);
 }
 #shuffle-btn{
-  outline-color: rgba(0,200,100,0.6);
   background-color: var(--green);
 }
- button:hover {
-   backdrop-filter: brightness(0%)!important;
-      outline-width: 0px;
-}
+
 button:focus{
   animation: pressed 0.2s ease 1;
 }
