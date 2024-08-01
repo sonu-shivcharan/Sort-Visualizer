@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&wght@0,200..800;1,200..800&display=swap');
+:root {
+  --primary-color: #00acf2;
+  --secondary-color: #86d6ff;
+  --accent-color: #dadada;
+  --text-color: #272727;
+  --background-color: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+  --primary-color: #007db0;
+  --secondary-color: #55c4fb;
+  --accent-color: #515151;
+  --text-color: #d1d1d1;
+  --background-color: #212121;
+  --green:rgba(0,255,100,0.6);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+#title {
+  text-align: center;
+  padding: 6px;
+}
+#bar-container {
+  max-width: 800px;
+  width: 95%;
+  height: 400px;
+  margin: 0 auto!important;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items:;
+  transform: rotateX(180deg);
+  column-gap: 2px;
+  border: 1px solid #212121;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 2px var(--accent-color);
+}
+.bar {
+  max-width: 10px;
+  width: 100%;
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  border-radius: 0 0 5px 5px;
+}
+.btn-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  margin: auto;
+}
+button {
+  max-width: 200px;
+  width: 95%;
+  padding: 10px;
+  border:none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  outline-style: solid;
+  outline-width: 3px;
+  transition: 0.2s;
+}
+#sort-btn{
+  outline-color: rgba(0,100,200,0.5);
+background-color: var(--primary-color);
+}
+#shuffle-btn{
+  outline-color: rgba(0,200,100,0.6);
+  background-color: var(--green);
+}
+ button:hover {
+   backdrop-filter: brightness(0%)!important;
+      outline-width: 0px;
+}
+button:focus{
+  animation: pressed 0.2s ease 1;
+}
+#select-container {
+  max-width: 300px;
+  width: 95%;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+}
+#sort-select {
+  width: 95%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+@keyframes pressed {
+  0% {
+    transform: scale(0.94);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

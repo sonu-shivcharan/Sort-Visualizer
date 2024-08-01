@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="title">
+        <h1>Sort Visualizer</h1>
+      </div>
+      <div id="bar-container">
+      </div>
+      <div id="select-container">
+        <select id="sort-select">
+          <option value="bubble">Bubbble Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="merge">Merge Sort</option>
+          <option value="quick">Quick Sort</option>
+        </select>
+    </div>
+      <div class="btn-container flex">
+        <button id="shuffle-btn" onclick="setTimeout(()=>{this.blur()}, 200)">Shuffle</button>
+        <button id="sort-btn">Sort</button>
+      </div>
+    </div>
+  </body>
+      <script src="./src/index.js"></script>
+</html>
