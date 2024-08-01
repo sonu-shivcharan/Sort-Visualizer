@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&wght@0,200..800;1,200..800&display=swap');
 :root {
-  --primary-color: #00acf2;
-  --secondary-color: #86d6ff;
+  --primary-color: #0094d0;
+  --secondary-color: #4cc2ff;
   --accent-color: #fcf3f3;
-  --text-color: #272727;
-  --background-color: #f5f2f2;
+  --text-color: #333333;
+  --background-color: #f1f1f1;
   --green:rgba(0,150,90,1);
 }
 @media (prefers-color-scheme: dark) {
@@ -94,7 +94,7 @@ button {
   font-weight: bold;
   color: #fff;
   position: relative;
-  transition: 0.2s;
+  transition: 200ms;
 }
 #sort-btn{
 background-color: var(--primary-color);
