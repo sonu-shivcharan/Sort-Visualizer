@@ -40,9 +40,10 @@ function bubbleSort (arr, i, j) {
   }
   if (arr[j] > arr[j+1]) {
     swap(arr, j, j+1);
-    updateBarHeight( arr, j, j+1);
+    updateBarHeight(arr, j, j+1);
   }
-  setTimeout(()=> {bubbleSort(arr, i, j+1)}, 25);
+  setTimeout(()=> {
+    bubbleSort(arr, i, j+1)}, 25);
 }
 function selectionSort(arr, i) {
   if (i >= n-1) return;
@@ -138,7 +139,7 @@ async function quickSort(arr, low, high) {
 }
 
 const sortBtn = document.getElementById("sort-btn");
- function sortByInterval() {
+function sortByInterval() {
   const sortSelect = document.getElementById("sort-select");
   const sortName = sortSelect.value.toLowerCase();
   //sortBtn.removeEventListener('click', sortByInterval);
@@ -147,7 +148,7 @@ const sortBtn = document.getElementById("sort-btn");
   switch (sortName) {
     case "bubble":
       console.log("before running sort")
-       bubbleSort(arr, 0, 0);
+      bubbleSort(arr, 0, 0);
       console.log("after delay")
       break;
     case "selection":
@@ -166,17 +167,19 @@ const sortBtn = document.getElementById("sort-btn");
     }
   }
   function shuffleBars() {
-  let randomIdx = 0;
-  for (let i in arr) {
-    randomIdx = Math.floor(Math.random()*arr.length);
-    swap(arr, i, randomIdx);
+    let randomIdx = 0;
+    for (let i in arr) {
+      randomIdx = Math.floor(Math.random()*arr.length);
+      swap(arr, i, randomIdx);
+    }
+    updateBarHeights(arr);
+    sortBtn.onclick = sortByInterval;
   }
-  updateBarHeights(arr);
-  sortBtn.onclick = sortByInterval;
-}
-const btns = document.querySelectorAll('button');
-btns.forEach((btn)=>{
-  btn.addEventListener(('click'),()=>{setTimeout(()=>{this.blur()}, 200)})
-})
+  const btns = document.querySelectorAll('button');
+  btns.forEach((btn)=> {
+    btn.addEventListener('click', (e)=> {
+      setTimeout(()=> {e.target.blur()}, 200);
+    })
+  })
   document.getElementById("shuffle-btn").addEventListener("click", shuffleBars)
   sortBtn.onclick = sortByInterval;
