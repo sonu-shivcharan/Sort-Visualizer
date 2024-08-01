@@ -43,17 +43,6 @@ function bubbleSort (arr, i, j) {
     updateBarHeight( arr, j, j+1);
   }
   setTimeout(()=> {bubbleSort(arr, i, j+1)}, 25);
-    /*await setTimeout(bubbleSort, 25, arr, i, j+1);
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n-i-1; j++) {
-      if (arr[j] > arr[j+1]) {
-                await new Promise(resolve => setTimeout(resolve, 25))
-        swap(arr, j, j+1);
-        updateBarHeight(arr, j, j+1);
-      }
-    }
-    await new Promise(resolve => setTimeout(resolve, 25))
-  }*/
 }
 function selectionSort(arr, i) {
   if (i >= n-1) return;
@@ -78,7 +67,6 @@ function insertionSort(arr, i) {
     if (idx > 0 && arr[idx] < arr[idx-1]) {
       swap(arr, idx, idx-1);
       updateBarHeight(arr, idx, idx-1);
-      //updateBarHeight(arr, idx-1);
       didSwapped = true;
     }
     if (didSwapped) {
@@ -91,7 +79,6 @@ function insertionSort(arr, i) {
   helper(j);
 }
 async function mergeSort(arr, low, high) {
-  //console.log(low, high)
   if (low >= high) return;
   const mid = parseInt((low+high)/2);
   await mergeSort(arr, low, mid)
@@ -187,7 +174,9 @@ const sortBtn = document.getElementById("sort-btn");
   updateBarHeights(arr);
   sortBtn.onclick = sortByInterval;
 }
-
+const btns = document.querySelectorAll('button');
+btns.forEach((btn)=>{
+  btn.addEventListener(('click'),()=>{setTimeout(()=>{this.blur()}, 200)})
+})
   document.getElementById("shuffle-btn").addEventListener("click", shuffleBars)
-  // sortBtn.addEventListener("click",sortByInterval);
   sortBtn.onclick = sortByInterval;

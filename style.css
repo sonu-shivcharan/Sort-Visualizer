@@ -5,6 +5,7 @@
   --accent-color: #dadada;
   --text-color: #272727;
   --background-color: #ffffff;
+  --green:rgba(0,200,0, 1);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -38,7 +39,6 @@ body {
   padding: 10px 10px;
   display: flex;
   justify-content: center;
-  align-items:;
   transform: rotateX(180deg);
   column-gap: 2px;
   border: 1px solid #212121;
