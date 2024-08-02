@@ -182,4 +182,4 @@ function sortByInterval() {
     })
   })
   document.getElementById("shuffle-btn").addEventListener("click", shuffleBars)
-  sortBtn.onclick = sortByInterval;
+  //sortBtn.onclick = sortByInterval;
