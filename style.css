@@ -118,21 +118,26 @@ button {
   max-width: 200px;
   width: 95%;
   padding: 10px;
-  border: none;
+  border: 0 solid transparent;
   border-radius: 5px;
   font-weight: bold;
   color: #fff;
   position: relative;
   transition: 200ms;
   box-shadow: 0 0 3px var(--shadow-color);
+  outline:0 solid;
 }
 #sort-btn {
   background-color: var(--primary-color);
+  outline-color: rgba(0,100,200,0.3);
 }
 #shuffle-btn {
   background-color: var(--green);
+  outline-color: rgba(0,200,100,0.3);
 }
-
+button:hover{
+  outline-width: 3px;
+}
 button:focus {
   animation: pressed 0.2s ease 1;
 }
